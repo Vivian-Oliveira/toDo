@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import * as S from "./StylesGlobal";
 import TodoList from "./components/TodoList";
-import TodoForm from "./components/TodoList/TodoForm";
+import TodoForm from "./components/TodoForm";
 
 const App = () => {
   const [todos, setTodos] = useState([
-    { complete: false, task: "Read about MongoDb" },
-    { complete: false, task: "Create a React ToDo App" },
-    { complete: false, task: "Find my key" },
+    { complete: false, task: "task1" },
+    { complete: false, task: "task2" },
+    { complete: false, task: "task3" },
   ]);
   return (
     <S.Container>
       <TodoForm
         addTodo={(todo) => {
-          if (todo.task.trim().lengh > 0) {
+          if (todo.task.trim().length > 0) {
             setTodos([...todos, todo]);
           }
-          console.log(todo);
         }}
       />
       <TodoList todos={todos} />

@@ -9,7 +9,9 @@ const TodoForm = ({ addTodo }) => {
     if (!userInput) return;
     addTodo({ complete: false, task: userInput });
     setUserInput("");
+    console.log(setUserInput, "FORM");
   };
+
   return (
     <S.Form onSubmit={handleSubmit}>
       <S.Input
