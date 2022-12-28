@@ -9,6 +9,7 @@ const App = () => {
     { complete: false, task: "task2" },
     { complete: false, task: "task3" },
   ]);
+
   return (
     <S.Container>
       <TodoForm
